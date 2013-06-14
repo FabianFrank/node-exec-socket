@@ -6,7 +6,7 @@ int main() {
 
     struct stat fdstat;
 
-    fstat(fileno(stdin), &fdstat);
+    fstat(fileno(stdout), &fdstat);
 
     switch (fdstat.st_mode & S_IFMT) {
         case S_IFBLK:  printf("block device\n");            break;
